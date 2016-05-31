@@ -47,7 +47,8 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/member/joinProcess")
-	public String joinProcess(@ModelAttribute MemberDTO mdto, HttpSession session){
+	public String joinProcess(@ModelAttribute MemberDTO mdto){
+		System.out.println("프리룰ㄹ2");
 		System.out.println("아이디: "+ mdto.getId());
 		System.out.println("비밀번호: " +mdto.getPw());
 		System.out.println("이름: "+mdto.getName());
