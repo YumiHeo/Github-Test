@@ -12,6 +12,7 @@
 
 <P>  The time on the server is ${serverTime}. </P>
 
+<p> ${message}</p>
 <c:choose>
 <c:when test="${member eq null }">
 	<p><a href="member/login">로그인</a></p>
