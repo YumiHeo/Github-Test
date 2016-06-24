@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="dbconn" class="com.choa.util.DBConnector">
+	<!-- DBConnector  dbconn = new DBConnector -->
+		<property name="user" value="user04"></property>
+		<property name="password" value="user04"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="driver" value="oracle.jdbc.driver.OracleDriver"></property>
+	</bean>
+	
+	<context:component-scan base-package="com.choa.member"></context:component-scan>
+	<context:component-scan base-package="com.choa.notice"></context:component-scan>	
+</beans>
